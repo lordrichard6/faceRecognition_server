@@ -4,7 +4,7 @@ const Clarifai = require('clarifai');
 // for security reasons clarify api is moved here.
 // my personal clarifai api key
 const app = new Clarifai.App({
-    apiKey: '69f8e27a05a34a9a9083666516999b89'
+    apiKey: process.env.API_CLARIFAI //api key was moved to heroku config vars for security reasons
   });
 
 const handleApiCall = (req, res) => {
